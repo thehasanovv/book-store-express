@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<div id="container">
+    <body>
+        <header class="position-fixed fixed-top bg-white" style='border-bottom: 2px solid whitesmoke;'>
+            <div class="container">
+                {{> site-nav}} 
+            </div>
+            <!-- DIV-Container -->
+        </header>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content p-4">
+                    <div class="modal-body">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <div class="modal-title mb-4 font-weight-bold text-center h2">
+                            Join Us
+                        </div>
+
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control my-4" id="modal-firstname" aria-describedby="emailHelp" placeholder="Enter Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control my-4" id="modal-surname" aria-describedby="emailHelp" placeholder="Enter Surname">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control my-4" id="modal-email" aria-describedby="emailHelp" placeholder="Enter Email">
+                            </div>
+                            <button type="button" class="btn text-center  w-100 h2" id="join-us" style="background-color: var(--mainColorOrange)">Join</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main section -->
+        <main class="my-5 pt-5 text-main">
+            <div class="container height-vh">
+                <!-- Section 1 Books from A to Z-->
+                <section class="row mt-5 justify-content-between info-section align-items-center">
+                    <!-- Jumbatron -->
+                    <div class="col-sm-12 col-md-6 ">
+                        <div class="jumbotron mt-5 bg-transparent">
+                            <h1 class="h1 font-weight-bolder books-a-z">Books from A to Z</h1>
+                            <p class="a-z-text">In our store you can find a book for every taste. A large assortment. Nice prices. Interesting stories.</p>
+                            <button class="btn-lg mt-3 go-to-btn" type="button" style="background:var(--mainColorOrange);"><a href="/catalog" class="text-white text-decoration-none go-to">Go to Catalog</a></button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="img-content mt-5">
+                            <img class="img-fluid" src="images/books.png" alt="books">
+                        </div>
+                    </div>
+                </section>
+                <!-- Section 2 Catalog-->
+                <section class="row catalog-section ">
+                    <div class="col-md 12 mt-5">
+                        <p class="h2 mt-5  catalog-text">Catalog</p>
+                    </div>
+                    <!-- Excample catalogs -->
+                    <div class="col-md-12 ">
+                        <div class="row d-flex justify-content-between " id='catalog-list'>
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow cursor-pointer py-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Crime</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow cursor-pointer py-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Adventure</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow cursor-pointer py-3">
+                                    <div class="card-body">
+                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Fantastic</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="row d-flex justify-content-between " id='catalog-list'>
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card shadow cursor-pointer py-3">
+                                            <div class="card-body">
+                                                <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Detective</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card shadow cursor-pointer py-3">
+                                            <div class="card-body">
+                                                <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Horror</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card shadow cursor-pointer py-3">
+                                            <div class="card-body">
+                                                <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Thriller</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                    </div>
+
+                                    <div class="col-md-12 ">
+                                        <div class="row d-flex justify-content-between " id='catalog-list'>
+                                            <div class="col-md-4 mb-4">
+                                                <div class="card shadow cursor-pointer py-3">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Tragedy</a></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-4">
+                                                <div class="card shadow cursor-pointer py-3">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Drama</a></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-4">
+                                                <div class="card shadow cursor-pointer py-3">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Motivational</a></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </section>
+
+                <!-- Section 3 About us -->
+                <section class='row my-5 about-store-section'>
+                    <div class="col-md-12 mb-5 ">
+                        <div class='about-store-text'>About Store</div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row justify-content-between">
+
+                            <div class="col-sm-12 col-md-6 col-lg-3 ">
+                                <div class="d-flex align-items-center">
+                                    <div class="as-result-numbers">
+                                        <p>35</p>
+                                    </div>
+                                    <div class="as-result-text">
+                                        <p>Branches the country</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="as-result-numbers">
+                                        <p>898</p>
+                                    </div>
+                                    <div class="as-result-text">
+                                        <p>Praducts catalog</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="as-result-numbers">
+                                        <p>8659</p>
+                                    </div>
+                                    <div class="as-result-text">
+                                        <p>Branches the country</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="as-result-numbers">
+                                        <p>72</p>
+                                    </div>
+                                    <div class="as-result-text">
+                                        <p>Hours delivery to cities</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--  Class-row -->
+                    </div>
+                    <!-- Class col-md-12 -->
+                </section>
+                <!-- Section 4 Delivery -->
+                <section class="row my-5 delivery-section">
+                    <div class="col-12 col-sm-12 col-md-12 mb-5 ">
+                        <div class='delivery-title'>Delivery</div>
+                    </div>
+                    <div class='col-12 col-sm-12 col-md-12 delivery-text' line-height='24px'>We work without holidays and weekends! Residents of Kiev can receive an order on the day of its registration. Customers from other cities of Ukraine can receive an order within 1-5 days, depending on the location of the settlement
+                        and the selected delivery method. Orders over UAH 1000 are delivered free of charge *. You can see the available methods, exact terms and cost of delivery during checkout in the order basket, after selecting the delivery city.
+                        More details</div>
+                </section>
+                </div>
+                <!-- Main-container -->
+        </main>
+
+        
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script type="module" src="./assets/script/main.js"></script>
+
+    </body>
+
+</html>
