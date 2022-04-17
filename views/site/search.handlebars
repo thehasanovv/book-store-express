@@ -3,63 +3,15 @@
 
 
 <!-- Css -->
-<link rel="stylesheet" href="./assets/css/style.css" />
-<link rel="stylesheet" href="./assets/css/search.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/search.css" />
 
 <body>
     <header class="position-fixed fixed-top bg-white" style="border-bottom: 2px solid whitesmoke">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light mt-3 px-0">
-                <a class="navbar-brand" href="index.html">
-                    <img src="./assets/images/logo.png" alt="logo" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav w-100 justify-content-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="catalog.html">Catalog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="about-store.html">About Store</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="contact-us.html"
-                  >Contact Us</a
-                >
-              </li>
-              <li class="nav-item font-weight-bolder">
-                <a
-                  class="nav-link text-dark"
-                  href="search.html"
-                  style="color: var(--mainColorOrange) !important"
-                  >Search</a
-                >
-              </li>
-            </ul>
-            <div class="btn d-flex align-items-center join-div">
-              <button
-                type="button"
-                class="btn"
-                data-toggle="modal"
-                data-target="#exampleModal"
-              >
-                <img src="./assets/images/join.png" alt="join" />
-                <span class="ml-2">Join</span>
-              </button>
-            </div>
-          </div>
-          <!-- DIV collapse -->
-        </nav>
+      <div class="container">
+	      {{> site-nav}}
       </div>
-      <!-- DIV-Container -->
     </header>
-
     <!-- Modal -->
     <div
       class="modal fade"
@@ -214,130 +166,9 @@
       <!-- READ MORE SECTION END -->
   </main>
 
-    <footer class="row m-0">
-      <div class="col-md-12">
-        <div class="row justify-content-center">
-          <div class="col-8 col-sm-6 col-md-4 col-lg-3 p-0">
-            <div class="jumbotron text-center text-main bg-transparent">
-              <h2 class="h3 font-weight-bolder mb-4">
-                Follow us on social media
-              </h2>
-              <div class="icons">
-                <div class="icon mt-3">
-                  <img
-                    src="./assets/images/facebook.png"
-                    alt="facebook"
-                    class="img-fluid"
-                  />
-                </div>
-                <div class="icon mt-3">
-                  <img
-                    src="./assets/images/twitter.png"
-                    alt="twitter"
-                    class="img-fluid"
-                  />
-                </div>
-                <div class="icon mt-3">
-                  <img
-                    src="./assets/images/Vector.png"
-                    alt="instagram"
-                    class="img-fluid"
-                  />
-                </div>
-                <div class="icon mt-3">
-                  <img
-                    src="./assets/images/instagram.png"
-                    alt="instagram"
-                    class="img-fluid"
-                  />
-                </div>
-                <div class="icon mt-3">
-                  <img
-                    src="./assets/images/youtube.png"
-                    alt="instagram"
-                    class="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12 m-0 p-0">
-        <div class="jumbotron jumbotron-fluid text-white p-4 m-0 footer-info">
-          <div class="container">
-            <div class="row py-4">
-              <div class="col-md-6">
-                <div>
-                  <img src="./assets/images/footer-logo.png" alt="logo" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-md-4">
-                    <h3 class="h3 mb-5">Popular</h3>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >A second item</a
-                      >
-                    </p>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >A third item</a
-                      >
-                    </p>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >And fifth one</a
-                      >
-                    </p>
-                  </div>
-                  <div class="col-md-4">
-                    <h3 class="h3 mb-5">Information</h3>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >A second item</a
-                      >
-                    </p>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >A third item</a
-                      >
-                    </p>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >And fifth one</a
-                      >
-                    </p>
-                  </div>
-                  <div class="col-md-4">
-                    <h3 class="h3 mb-5">Help</h3>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >A second item</a
-                      >
-                    </p>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >A third item</a
-                      >
-                    </p>
-                    <p class="mb-4">
-                      <a href="#" class="text-white text-decoration-none"
-                        >And fifth one</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+    
     <!-- Script -->
-    <script type="module" src="./assets/script/search.js" defer></script>
+    <script type="module" src="/script/search.js" defer></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
