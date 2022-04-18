@@ -18,7 +18,7 @@
             <div class="modal-content p-4">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span> aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <div class="modal-title mb-4 font-weight-bold text-center h2">
                         Join Us
@@ -43,7 +43,7 @@
     <!-- Main section -->
     <main class="my-5 pt-5 text-main">
         <div class="container height-vh mt-5 pt-5">
-            <form action="/contact/contactus" method="post">
+            <form action="/contact" method="POST">
                 <div class="form-row">
                 <div class="form-group col-md-6">
                     <input type="text" class="form-control" name="name" placeholder="Name" style="height: 75px;" />
@@ -59,9 +59,9 @@
                 <div class="form-group col-md-6">
                     <input type="text" class="form-control" name="phone" placeholder="Phone" style="height: 75px;" />
                 </div>
+                <input type="submit" value="Submit" class="btn text-white col-12 col-sm-12 col-md-6 " id="send-button" style="background-color: var(--mainColorOrange); height: 75px;">Send</input>
             </form>
         </div>
-        <button type="submit" class="btn text-white col-12 col-sm-12 col-md-6 " id="send-button" style="background-color: var(--mainColorOrange); height: 75px;">Send</button>
     </main>
 
 
