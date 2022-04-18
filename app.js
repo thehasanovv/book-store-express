@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 const home = require('./router/homeRoutes');
 const about = require('./router/aboutRoutes');
@@ -15,11 +17,36 @@ app.engine('handlebars', exphbs.engine());
 
 app.set('view engine', 'handlebars');
 
+app.use(session({
+    secret: "authkeyforuser",
+    resave: false,
+    saveUninitialized: true,
+    store: MongoStore.create({mongoUrl: process.env.DATABASE})
+}))
+
 app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
+
+//DISPLAY MIDDLEWARE
+
+app.use((req,res,next) => {
+    const {userId} = req.session;
+
+    if(userId) {
+        res.locals = {
+            displayLink: true
+        }
+    }
+    else {
+        res.locals = {
+            displayLink: false
+        }
+    }
+    next();
+})
 
 app.use('/', home);
 app.use('/about', about);

@@ -2,25 +2,15 @@
   <a class='navbar-brand' href='/'>
     <img src='/images/logo.png' alt='logo' />
   </a>
-  <button
-    class='navbar-toggler'
-    type='button'
-    data-toggle='collapse'
-    data-target='#navbarNav'
-    aria-controls='navbarNav'
-    aria-expanded='false'
-    aria-label='Toggle navigation'
-  >
+  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav'
+    aria-expanded='false' aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>
   <div class='collapse navbar-collapse' id='navbarNav'>
     <ul class='navbar-nav w-100 justify-content-center snip1135'>
       <li class='nav-item active'>
-        <a
-          class='nav-link font-weight-bolder'
-          href='/'
-          style='color: var(--mainColorOrange)'
-        >Home <span class='sr-only'>(current)</span></a>
+        <a class='nav-link font-weight-bolder' href='/' style='color: var(--mainColorOrange)'>Home <span
+            class='sr-only'>(current)</span></a>
       </li>
       <li class='nav-item'>
         <a class='nav-link text-dark' href='/catalog'>Catalog</a>
@@ -35,24 +25,29 @@
         <a class='nav-link text-dark' href='/search'>Search</a>
       </li>
     </ul>
+
+    {{#unless displayLink}}
     <div class='btn d-flex align-items-center join-div'>
-      <button
-        type='button'
-        class='btn'
-        data-toggle='modal'
-        data-target='#loginModal'
-      >
+      <button type='button' class='btn' data-toggle='modal' data-target='#loginModal'>
         <span class='join-span ml-2'>Sign in</span>
       </button>
-      <button
-        type='button'
-        class='btn'
-        data-toggle='modal'
-        data-target='#registerModal'
-      >
+      <button type='button' class='btn' data-toggle='modal' data-target='#registerModal'>
         <span class='join-span ml-2'>Sign Up</span>
       </button>
     </div>
+    {{/unless}}
+
+    {{#if displayLink}}
+    <div class='btn d-flex align-items-center join-div'>
+      <button type='button' class='btn'>
+        <a href="/users/logout">
+          <span class='join-span ml-2' style='color: var(--mainColorOrange)'>Logout</span>
+        </a>
+      </button>
+    </div>
+
+    {{/if}}
+
   </div>
   <!-- DIV collapse -->
 </nav>

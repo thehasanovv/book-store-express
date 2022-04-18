@@ -4,13 +4,20 @@ const User = require('../models/userModel');
 
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
-
+  console.log(req.session);
   User.findOne({ email }, (err, user) => {
-    if (user.password === password) {
-      res.redirect('/');
-    } else {
-      res.end('Wrong password');
+    if(user){
+      if (user.password === password) {
+        req.session.userId = user._id;
+        res.redirect('/');
+      } else {
+        res.end('Wrong password');
+      }
     }
+    else {
+      res.redirect('/')
+    }
+    
   });
 });
 
@@ -22,5 +29,9 @@ router.post('/register', async (req, res) => {
   }
   res.redirect('/');
 });
+
+router.get('/logout', (req,res)=> {
+  req.session.destroy(()=> res.redirect('/'))
+})
 
 module.exports = router;
