@@ -18,7 +18,7 @@
 }
 
 .catalog-section {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
+  /* animation: 1s ease-out 0s 1 slideInFromLeft; */
 }
 
 header {
@@ -199,6 +199,11 @@ Footer
   cursor: pointer;
 }
 
+.icon:hover {
+  transform: translateY(-10px);
+  transition: linear 0.2s;
+}
+
 .icon img {
   width: 75%;
 }
@@ -214,8 +219,7 @@ index.html
 */
 
 .info-section {
-  height: 87vh;
-  margin-top: 13vh;
+  height: 100vh;
 }
 
 .books-a-z {

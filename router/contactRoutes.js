@@ -8,8 +8,11 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const newContact = await ContactModel.create(req.body);
-  console.log(newContact);
+  try {
+    const newContact = await ContactModel.create(req.body);
+  } catch (err) {
+    console.log(err.message);
+  }
   res.redirect('/contact');
 });
 
