@@ -8,7 +8,6 @@ const contactSchema = new mongoose.Schema({
     trim: true,
     maxlength: [25, 'Name must have less or equal than 25 characters'],
     minlength: [6, 'Name must have more or equal than 6 characters'],
-    validate: [validator.isEmail, 'Please enter a valid email'],
   },
   surname: {
     type: String,
@@ -20,6 +19,7 @@ const contactSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, 'Email is required'],
+    validate: [validator.isEmail, 'Please enter a valid email'],
   },
   phone: {
     type: String,

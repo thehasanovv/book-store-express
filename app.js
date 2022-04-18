@@ -8,6 +8,7 @@ const about = require('./router/aboutRoutes');
 const catalog = require('./router/catalogRoutes');
 const contact = require('./router/contactRoutes');
 const search = require('./router/searchRoutes');
+const users = require('./router/usersRoutes');
 const app = express();
 
 app.engine('handlebars', exphbs.engine());
@@ -25,5 +26,6 @@ app.use('/about', about);
 app.use('/catalog', catalog);
 app.use('/search', search);
 app.use('/contact', contact);
+app.use('/users', users);
 
 module.exports = app;
