@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/css/style.css" />
 
 <body>
-    <header class="position-fixed fixed-top bg-white" style="border-bottom: 2px solid whitesmoke">
+    <header class="position-fixed fixed-top" style="border-bottom: 2px solid whitesmoke">
         <div class="container">
 	      {{> site-nav}}
         </div>
@@ -43,21 +43,21 @@
     <!-- Main section -->
     <main class="my-5 pt-5 text-main">
         <div class="container height-vh mt-5 pt-5">
-            <form action="/contact" method="post">
+            <form action="/contact/contactus" method="post">
                 <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" name="contact_name" placeholder="Name" style="height: 75px;" />
+                    <input type="text" class="form-control" name="name" placeholder="Name" style="height: 75px;" />
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" name="contact_surname" placeholder="Surname" style="height: 75px;" />
+                    <input type="text" class="form-control" name="surname" placeholder="Surname" style="height: 75px;" />
                 </div>
                 </div>
                 <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="email" class="form-control" name="contact_email" placeholder="E-mail" style="height: 75px;" />
+                    <input type="email" class="form-control" name="email" placeholder="E-mail" style="height: 75px;" />
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" name="contact_phone" placeholder="Phone" style="height: 75px;" />
+                    <input type="text" class="form-control" name="phone" placeholder="Phone" style="height: 75px;" />
                 </div>
             </form>
         </div>
