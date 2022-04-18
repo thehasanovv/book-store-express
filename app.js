@@ -11,6 +11,7 @@ const catalog = require('./router/catalogRoutes');
 const contact = require('./router/contactRoutes');
 const search = require('./router/searchRoutes');
 const users = require('./router/usersRoutes');
+
 const app = express();
 
 app.engine('handlebars', exphbs.engine());
