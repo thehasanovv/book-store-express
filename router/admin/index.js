@@ -19,8 +19,6 @@ router.get('/', (req, res) => {
                 })
         })
     }
-    
-
 });
 
 router.post('/aboutstore', async (req, res) => {

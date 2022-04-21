@@ -71,23 +71,24 @@
 
         <div class="row mt-5 mb-5">
           <div
-            class="col-lg-9 col-md-10 col-10"
-            id="all-categories"
-            style="display: block; margin: auto; font-size: 25px"
+            class="col-lg-9 col-md-10 col-10 d-flex flex-wrap justify-content-between"
+            style="margin: auto; font-size: 25px"
           >
-            <div id="all-books-slick"></div>
-            <div class="d-none" id="crime-slick"></div>
-            <div class="d-none" id="detective-slick"></div>
-            <div class="d-none" id="adventures-slick"></div>
-            <div class="d-none" id="fantastic-slick"></div>
-            <div class="d-none" id="drama-slick"></div>
-            <div class="d-none" id="horror-slick"></div>
-            <div class="d-none" id="thriller-slick"></div>
-            <div class="d-none" id="motivational-slick"></div>
-            <div class="d-none" id="tragedy-slick"></div>
+            {{#each book}}
+              <div class="card shadow rounded mt-5" style="width: 16rem">
+                  <img class="card-img-top img-fluid" src={{imageUrl}} alt="Card image" style="height: 250px; object-fit: cover;">
+                  <div class="card-body d-flex flex-column justify-content-around" style="height:12rem">
+                      <h6 class="card-title text-center book-name" >{{bookName}}</h6>
+                      <p class="card-text text-center" style="font-size:14px;">{{authorName}}</p>
+                      <button class="btn btn-primary read-more " data-name={{bookName}} style="font-size:16px;">Read more</button>
+                  </div>
+              </div>
+              {{/each}}
+            </div>
           </div>
         </div>
-        <div class="row mt-5 pt-5">
+
+        {{!-- <div class="row mt-5 pt-5">
           <div
             class="col-lg-9 col-md-10 col-10"
             style="display: block; margin: auto"
@@ -96,7 +97,8 @@
               Bestseller
             </h2>
             <div class="items best-seller d-flex"></div>
-          </div>
+          </div> --}}
+
         </div>
       </div>
     </main>

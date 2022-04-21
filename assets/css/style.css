@@ -256,6 +256,17 @@ index.html
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .card {
+    width: 45% !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100% !important;
+  }
+}
 /* 
 ===============================
 Catalog section

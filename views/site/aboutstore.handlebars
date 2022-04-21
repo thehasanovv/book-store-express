@@ -9,13 +9,12 @@
   {{> login-modal}}
   {{> register-modal}}
   <!-- Main section -->
-  {{#if about}}
   <main class="my-5 pt-5 text-main">
     <div class="container height-vh">
       <div class="row justify-content-between mt-5">
         <div class="col-12 col-sm-12 col-md-6">
-          <h1 class="h2 mt-5" id="about-title"></h1>
-          <p class="p-6" id="about-description"></p>
+          <h1 class="h2 mt-5" id="about-title">{{about.title}}</h1>
+          <p class="p-6" id="about-description">{{about.desc}}</p>
         </div>
         <div class="col-12 col-sm-12 col-md-5 mt-4 d-flex">
           <img id="about-img" src={{about.imgUrl}} alt="books" class="img-fluid" />
@@ -24,7 +23,6 @@
     </div>
     <!-- Main-container -->
   </main>
-  {{/if}}
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
