@@ -37,8 +37,8 @@ body {
   height: 380px;
 }
 
-.login-container div {
-  padding-top: 1.5rem;
+.login-container > div {
+  padding-top: 2rem;
 }
 
 .login input,

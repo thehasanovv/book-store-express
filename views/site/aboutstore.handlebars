@@ -1,47 +1,37 @@
 <html lang="en">
 
-  <body>
-    <header
-      class="position-fixed fixed-top"
-      style="border-bottom: 2px solid whitesmoke"
-    >
-      <div class="container">
-	          {{> site-nav}}
-      </div>
-    </header>
-	          {{> login-modal}}
-	          {{> register-modal}}
-    <!-- Main section -->
-    <main class="my-5 pt-5 text-main">
-      <div class="container height-vh">
-        <div class="row justify-content-between mt-5">
-          <div class="col-12 col-sm-12 col-md-6">
-            <h1 class="h2 mt-5" id="about-title"></h1>
-            <p class="p-6" id="about-description"></p>
-          </div>
-          <div class="col-12 col-sm-12 col-md-5 mt-4 d-flex">
-            <img
-              id="about-img"
-              src="/images/Infinity-1s-200px.gif"
-              alt="books"
-              class="img-fluid"
-            />
-          </div>
+<body>
+  <header class="position-fixed fixed-top" style="border-bottom: 2px solid whitesmoke">
+    <div class="container">
+      {{> site-nav}}
+    </div>
+  </header>
+  {{> login-modal}}
+  {{> register-modal}}
+  <!-- Main section -->
+  {{#if about}}
+  <main class="my-5 pt-5 text-main">
+    <div class="container height-vh">
+      <div class="row justify-content-between mt-5">
+        <div class="col-12 col-sm-12 col-md-6">
+          <h1 class="h2 mt-5" id="about-title"></h1>
+          <p class="p-6" id="about-description"></p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 mt-4 d-flex">
+          <img id="about-img" src={{about.imgUrl}} alt="books" class="img-fluid" />
         </div>
       </div>
-      <!-- Main-container -->
-    </main>
+    </div>
+    <!-- Main-container -->
+  </main>
+  {{/if}}
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+  <script type="module" src="/script/main.js"></script>
+</body>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="/script/main.js"></script>
-  </body>
 </html>
