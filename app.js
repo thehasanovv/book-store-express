@@ -18,12 +18,14 @@ app.engine('handlebars', exphbs.engine());
 
 app.set('view engine', 'handlebars');
 
-app.use(session({
-    secret: "authkeyforuser",
+app.use(
+  session({
+    secret: 'authkeyforuser',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({mongoUrl: process.env.DATABASE})
-}))
+    store: MongoStore.create({ mongoUrl: process.env.DATABASE }),
+  })
+);
 
 app.use(express.static(path.join(__dirname, 'assets')));
 
@@ -33,21 +35,20 @@ app.use(bodyParser.json());
 
 //DISPLAY MIDDLEWARE
 
-app.use((req,res,next) => {
-    const {userId} = req.session;
+app.use((req, res, next) => {
+  const { userId } = req.session;
 
-    if(userId) {
-        res.locals = {
-            displayLink: true
-        }
-    }
-    else {
-        res.locals = {
-            displayLink: false
-        }
-    }
-    next();
-})
+  if (userId) {
+    res.locals = {
+      displayLink: true,
+    };
+  } else {
+    res.locals = {
+      displayLink: false,
+    };
+  }
+  next();
+});
 
 app.use('/', home);
 app.use('/about', about);
