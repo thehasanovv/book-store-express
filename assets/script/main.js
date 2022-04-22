@@ -241,9 +241,15 @@
 //   delay: 400,
 // });
 
-ScrollReveal().reveal('.reveal', {
-  reset: true,
-  duration: 1500,
-  delay: 400,
-  distance: '60px',
+// ScrollReveal().reveal('.reveal', {
+//   reset: true,
+//   duration: 1500,
+//   delay: 400,
+//   distance: '60px',
+// });
+
+window.addEventListener('load', function () {
+  const loader = document.querySelector('#loader');
+  // loader.style.display = 'none';
+  loader.className += ' hidden';
 });

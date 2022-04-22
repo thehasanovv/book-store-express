@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Css -->
 <link rel="stylesheet" href="/css/style.css" />
-
 <body>
+    <div id="loader"></div>
     <header class="position-fixed fixed-top" style="border-bottom: 2px solid whitesmoke">
 	      {{> site-nav}}
     </header>
-
     {{> login-modal}}
     {{> register-modal}}
-
-    <!-- Main section -->
     <main class="my-5 pt-5 text-main">
         <div class="container height-vh mt-5 pt-5">
             <form action="/contact" method="POST">
@@ -49,5 +43,6 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="/script/main.js"></script>
   </body>
 </html>
