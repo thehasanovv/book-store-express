@@ -1,76 +1,79 @@
-<nav class='navbar navbar-expand-lg navbar-light mt-3 mb-3 p-0'>
-  <a class='navbar-brand' href='/'>
-    <img src='/images/logo.png' alt='logo' />
-  </a>
-  <button
-    class='navbar-toggler'
-    type='button'
-    data-toggle='collapse'
-    data-target='#navbarNav'
-    aria-controls='navbarNav'
-    aria-expanded='false'
-    aria-label='Toggle navigation'
-  >
-    <span class='navbar-toggler-icon'></span>
-  </button>
-  <div class='collapse navbar-collapse' id='navbarNav'>
-    <ul class='navbar-nav w-100 justify-content-center snip1135'>
-      <li class='nav-item active'>
-        <a
-          class='nav-link font-weight-bolder'
-          href='/'
-          style='color: var(--mainColorOrange)'
-        >Home <span class='sr-only'>(current)</span></a>
-      </li>
-      <li class='nav-item'>
-        <a class='nav-link text-dark' href='/catalog'>Catalog</a>
-      </li>
-      <li class='nav-item'>
-        <a class='nav-link text-dark' href='/about'>About Store</a>
-      </li>
-      <li class='nav-item'>
-        <a class='nav-link text-dark' href='/contact'>Contact Us</a>
-      </li>
-      <li class='nav-item'>
-        <a class='nav-link text-dark' href='/search'>Search</a>
-      </li>
-    </ul>
+<div class='nav-container'>
+  <nav class='navbar navbar-expand-lg navbar-light mt-3 mb-3 p-0'>
+    <a class='navbar-brand' href='/'>
+      <img src='/images/logo.png' alt='logo' />
+    </a>
+    <button
+      class='navbar-toggler'
+      type='button'
+      data-toggle='collapse'
+      data-target='#navbarNav'
+      aria-controls='navbarNav'
+      aria-expanded='false'
+      aria-label='Toggle navigation'
+    >
+      <span class='navbar-toggler-icon'></span>
+    </button>
+    <div class='collapse navbar-collapse' id='navbarNav'>
 
-    {{#unless displayLink}}
-      <div class='btn d-flex align-items-center join-div'>
-        <button
-          type='button'
-          class='btn'
-          data-toggle='modal'
-          data-target='#loginModal'
-        >
-          <span class='join-span ml-2'>Sign in</span>
-        </button>
-        <button
-          type='button'
-          class='btn'
-          data-toggle='modal'
-          data-target='#registerModal'
-        >
-          <span class='join-span ml-2'>Sign Up</span>
-        </button>
-      </div>
-    {{/unless}}
+      <ul class='navbar-nav w-100 justify-content-center snip1135'>
+        <li class='nav-item active'>
+          <a
+            class='nav-link font-weight-bolder'
+            href='/'
+            style='color: var(--mainColorOrange)'
+          >Home <span class='sr-only'>(current)</span></a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link text-dark' href='/catalog'>Catalog</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link text-dark' href='/about'>About Store</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link text-dark' href='/contact'>Contact Us</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link text-dark' href='/search'>Search</a>
+        </li>
+      </ul>
 
-    {{#if displayLink}}
-      <div class='btn d-flex align-items-center join-div'>
-        <button type='button' class='btn'>
-          <a href='/users/logout'>
-            <span
-              class='join-span ml-2'
-              style='color: var(--mainColorOrange)'
-            >Logout</span>
-          </a>
-        </button>
-      </div>
+      {{#unless displayLink}}
+        <div class='btn d-flex align-items-center join-div'>
+          <button
+            type='button'
+            class='btn'
+            data-toggle='modal'
+            data-target='#loginModal'
+          >
+            <span class='join-span ml-2'>Sign in</span>
+          </button>
+          <button
+            type='button'
+            class='btn'
+            data-toggle='modal'
+            data-target='#registerModal'
+          >
+            <span class='join-span ml-2'>Sign Up</span>
+          </button>
+        </div>
+      {{/unless}}
 
-    {{/if}}
+      {{#if displayLink}}
+        <div class='btn d-flex align-items-center join-div'>
+          <button type='button' class='btn'>
+            <a href='/users/logout'>
+              <span
+                class='join-span ml-2'
+                style='color: var(--mainColorOrange)'
+              >Logout</span>
+            </a>
+          </button>
+        </div>
 
-  </div>
-  <!-- DIV collapse -->
-</nav>
+      {{/if}}
+
+    </div>
+    <!-- DIV collapse -->
+  </nav>
+</div>
