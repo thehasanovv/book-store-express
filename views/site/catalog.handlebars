@@ -1,41 +1,42 @@
 <html lang="en">
 
-  <!-- Css -->
-  <link rel="stylesheet" href="/css/slider.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+<!-- Css -->
+<link rel="stylesheet" href="/css/style.css" />
 
-  <body>
-    <header
-      class="position-fixed fixed-top"
-      style="border-bottom: 2px solid whitesmoke"
-    >
-      <div class="container">
-	    {{> site-nav}}
-      </div>
-    </header>
-
-  	        {{> login-modal}}
-	          {{> register-modal}}
-
-    <!-- Main section -->
-    <main class="my-5 pt-5 text-main catalog-section">
-      <div class="container height-vh">
-        <p style="margin-top: 5%; font-size: 25px; font-weight: 500">
-          All books
-        </p>
-
-        <section
-          class="types col-12 col-sm-12 col-md-12"
-          style="
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            width: 400px;
-            overflow-x: scroll;
-          "
-        >
+<body>
+  <header
+    class="position-fixed fixed-top"
+    style="border-bottom: 2px solid whitesmoke"
+  >
+  {{> site-nav}}
+  </header>
+  {{> login-modal}}
+  {{> register-modal}}
+  <!-- Main section -->
+  <main class="my-5 pt-5 text-main catalog-section">
+    <div class="container height-vh">
+      <p style="margin-top: 5%; font-size: 25px; font-weight: 500">
+        All books
+      </p>
+      <div
+        class="types p-0"
+        style="
+          margin: 0 auto;
+          width: 420px;
+          overflow-x: scroll;
+        "
+      >
+        <div class="tl-wrapper" style="width: 100%;">
           <ul class="type-list" style="display: flex; border-color: red">
             <li>
+              <a class="types-list" id="detective" href="#">All</a>
+            </li>
+            {{#each book }} 
+            <li>
+              <a class="types-list" id="detective" href="#"></a>
+            </li>
+            {{/each}}
+            {{!-- <li>
               <a class="types-list" id="crime" href="#">Crime</a>
             </li>
             <li>
@@ -50,107 +51,52 @@
             <li>
               <a class="types-list" id="horror" href="#">Horror</a>
             </li>
-
             <li>
               <a class="types-list" id="motivational" href="#">Motivational</a>
             </li>
-
             <li>
               <a class="types-list" id="drama" href="#">Drama</a>
             </li>
-
             <li>
               <a class="types-list" id="thriller" href="#">Thriller</a>
             </li>
-
             <li>
               <a class="types-list" id="tragedy" href="#">Tragedy</a>
-            </li>
+            </li> --}}
           </ul>
-        </section>
-
-        <div class="row mt-5 mb-5">
-          <div
-            class="col-lg-9 col-md-10 col-10 d-flex flex-wrap justify-content-between"
-            style="margin: auto; font-size: 25px"
-          >
-            {{#each book}}
-              <div class="card shadow rounded mt-5" style="width: 16rem">
-                  <img class="card-img-top img-fluid" src={{imageUrl}} alt="Card image" style="height: 250px; object-fit: cover;">
-                  <div class="card-body d-flex flex-column justify-content-around" style="height:12rem">
-                      <h6 class="card-title text-center book-name" >{{bookName}}</h6>
-                      <p class="card-text text-center" style="font-size:14px;">{{authorName}}</p>
-                      <button class="btn btn-primary read-more " data-name={{bookName}} style="font-size:16px;">Read more</button>
-                  </div>
+        </div>
+      </div>
+      <div class="row mt-5 mb-5">
+        <div class="catalog-cards-wrapper">
+          {{#each book}}
+            <div class="shadow rounded mt-5 catalog-card" data-id={{_id}}>
+              <img class="card-img-top img-fluid" src={{imageUrl}} alt="Card image" style="height: 250px; object-fit: cover;">
+              <div class="card-body d-flex flex-column justify-content-around" style="height:12rem">
+                <h6 class="card-title text-center book-name" >{{bookName}}</h6>
+                <p class="card-text text-center" style="font-size:14px;">{{authorName}}</p>
+                <a href='/catalog/{{_id}}' class="btn read-more-btn" data-name={{bookName}}>Read More</a>
               </div>
-              {{/each}}
             </div>
-          </div>
-        </div>
-
-        {{!-- <div class="row mt-5 pt-5">
-          <div
-            class="col-lg-9 col-md-10 col-10"
-            style="display: block; margin: auto"
-          >
-            <h2 class="text-center" id="bestseller" style="font-size: 25px">
-              Bestseller
-            </h2>
-            <div class="items best-seller d-flex"></div>
-          </div> --}}
-
-        </div>
-      </div>
-    </main>
-    <!--READ MORE-->
-
-    <main class="my-5 pt-5 text-main d-none read-more-section">
-      <div class="container height-vh mt-5 pt-5">
-        <div class="row justify-content-around">
-          <div class="col-sm-12 col-md-5">
-            <button
-              class="btn back-btn"
-              style="color: #fff; background-color: var(--mainColorOrange)"
-              id="back-to-previous-ection"
-            >
-              ← back
-            </button>
-            <div class="mt-5">
-              <span class="badge badge-primary" id="public-year"></span>
-            </div>
-            <h3 class="h3" id="book-name"></h3>
-            <p id="author-name"></p>
-            <p id="introduction"></p>
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <img
-              src=""
-              alt="book"
-              class="img-fluid d-block ml-auto book-img rounded"
-              style="height: 661px"
-            />
+          {{/each}}
           </div>
         </div>
       </div>
-
-      <!-- READ MORE SECTION END -->
-    </main>
-    
-
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js "
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin=" anonymous "
-    ></script>
-    <script
-      type="text/javascript "
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js "
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js "
-      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF "
-      crossorigin="anonymous "
-    ></script>
-    <script type="module" src="/script/catalog.js"></script>
-  </body>
+    </div>
+  </main>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js "
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin=" anonymous "
+  ></script>
+  <script
+    type="text/javascript "
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js "
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js "
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF "
+    crossorigin="anonymous "
+  ></script>
+  <script type="module" src="/script/catalog.js"></script>
+</body>
 </html>

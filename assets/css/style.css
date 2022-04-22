@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 header {
-  animation: fadeInAnimation ease 1.3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
   background-color: #fef6ef;
 }
 
@@ -100,9 +97,16 @@ Scrollbar
 Navbar
 ================================
 */
+.nav-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
 
 .join-div {
   padding: 0px;
+  width: 250px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .join-span {
@@ -133,6 +137,14 @@ Navbar Hover
   animation: fadeInAnimation ease 1.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.read-more-btn {
+  font-size: 16px;
+  background: var(--mainColorOrange);
+  color: #fff;
+  outline: none;
+  border: none;
 }
 
 .text-main {
@@ -272,9 +284,28 @@ index.html
 Catalog section
 ===============================
 */
-
+.catalog-cards-wrapper {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+}
+.catalog-card {
+  cursor: pointer;
+}
+.catalog-card:hover {
+  transform: scale(1.01);
+  transition: 0.3s all;
+  background: #ffecdb;
+}
 .type-list li {
-  margin-left: 10%;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .catalog-cards-wrapper {
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -304,6 +335,9 @@ Catalog section
     height: auto;
     margin-top: 13vh;
   }
+  .catalog-cards-wrapper {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -312,5 +346,9 @@ Catalog section
   }
   #all-categories {
     margin-left: 12% !important;
+  }
+  .catalog-cards-wrapper {
+    padding: 2.5rem;
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
   }
 }

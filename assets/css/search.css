@@ -57,10 +57,6 @@
   background-color: var(--mainColorOrange);
 }
 
-.read-more-btn:hover {
-  background-color: var(--mainColorHover);
-}
-
 .card:hover .card-body {
   animation: fadeInAnimation ease 0.8s;
   animation-iteration-count: 1;
