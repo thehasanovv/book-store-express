@@ -15,11 +15,8 @@ const admin = require('./router/admin/index');
 
 const app = express();
 
-const { uniqueList } = require('./helpers/hbs');
 
-const hbs = exphbs.create({ helpers: uniqueList });
-
-app.engine('handlebars', hbs.engine);
+app.engine('handlebars', exphbs.engine());
 
 app.set('view engine', 'handlebars');
 
