@@ -29,40 +29,14 @@
         <div class="tl-wrapper" style="width: 100%;">
           <ul class="type-list" style="display: flex; border-color: red">
             <li>
-              <a class="types-list" id="detective" href="#">All</a>
+              <a class="types-list" id="detective" href="/catalog/{{name}}">All</a>
             </li>
-            {{#each book }} 
+            {{#each category }} 
             <li>
-              <a class="types-list" id="detective" href="#"></a>
+              <a class="types-list" id={{name}} href='/catalog/{{name}}'>{{name}}</a>
             </li>
             {{/each}}
-            {{!-- <li>
-              <a class="types-list" id="crime" href="#">Crime</a>
-            </li>
-            <li>
-              <a class="types-list" id="detective" href="#">Detective</a>
-            </li>
-            <li>
-              <a class="types-list" id="adventures" href="#">Adventures</a>
-            </li>
-            <li>
-              <a class="types-list" id="fantastic" href="#">Fantastic</a>
-            </li>
-            <li>
-              <a class="types-list" id="horror" href="#">Horror</a>
-            </li>
-            <li>
-              <a class="types-list" id="motivational" href="#">Motivational</a>
-            </li>
-            <li>
-              <a class="types-list" id="drama" href="#">Drama</a>
-            </li>
-            <li>
-              <a class="types-list" id="thriller" href="#">Thriller</a>
-            </li>
-            <li>
-              <a class="types-list" id="tragedy" href="#">Tragedy</a>
-            </li> --}}
+            
           </ul>
         </div>
       </div>
