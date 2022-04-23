@@ -29,11 +29,11 @@
         <div class="tl-wrapper" style="width: 100%;">
           <ul class="type-list" style="display: flex; border-color: red">
             <li>
-              <a class="types-list" id="detective" href="/catalog/{{name}}">All</a>
+              <a class="types-list" id="detective" href="/catalog/type/all">All</a>
             </li>
-            {{#each category }} 
+            {{#each uniqueTypes }} 
             <li>
-              <a class="types-list" id={{name}} href='/catalog/{{name}}'>{{name}}</a>
+              <a class="types-list" id={{this}} href='/catalog/type/{{this}}'>{{this}}</a>
             </li>
             {{/each}}
             
