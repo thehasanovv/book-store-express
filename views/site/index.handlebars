@@ -3,186 +3,172 @@
 
 <div id="container">
     <body>
+    <div id="loader"></div>
         <header class="position-fixed fixed-top" style='border-bottom: 2px solid whitesmoke;'>
-                {{> site-nav}} 
+        {{> site-nav}} 
         </header>
         {{> login-modal}}
         {{> register-modal}}
         <!-- Main section -->
-        <main class="text-main">
-            <div class="container">
-                <!-- Section 1 Books from A to Z-->
-                <section class="row justify-content-between info-section align-items-center">
-                    <!-- Jumbatron -->
-                    <div class="col-sm-12 col-md-6 mt-5">
-                        <div class="jumbotron bg-transparent">
-                            <h1 class="h1 font-weight-bolder books-a-z">Books from A to Z</h1>
-                            <p class="a-z-text">In our store you can find a book for every taste. A large assortment. Nice prices. Interesting stories.</p>
-                            <button class="btn-lg mt-3 go-to-btn" type="button" style="background:var(--mainColorOrange);"><a href="/catalog" class="text-white text-decoration-none go-to">Go to Catalog</a></button>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 mt-5">
-                        <div class="img-content ">
-                            <img class="img-fluid" src="images/books.png" alt="books">
-                        </div>
-                    </div>
-                </section>
-                <!-- Section 2 Catalog-->
-                <section class="row reveal" >
-                    <div class="col-md 12">
-                        <p class="h2 mt-5  catalog-text">Catalog</p>
-                    </div>
-                    <div class="col-md-12 ">
-                        <div class="row d-flex justify-content-between " id='catalog-list'>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Crime</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Adventure</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Fantastic</a></h4>
-                                    </div>
-                                </div>
+            <main class="text-main">
+                <div class="container">
+                    <!-- Section 1 Books from A to Z-->
+                    <section class="row justify-content-between info-section align-items-center">
+                        <!-- Jumbatron -->
+                        <div class="col-sm-12 col-md-6 mt-5">
+                            <div class="jumbotron bg-transparent">
+                                <h1 class="h1 font-weight-bolder books-a-z">Books from A to Z</h1>
+                                <p class="a-z-text">In our store you can find a book for every taste. A large assortment. Nice prices. Interesting stories.</p>
+                                <button class="btn-lg mt-3 go-to-btn" type="button" style="background:var(--mainColorOrange);"><a href="/catalog" class="text-white text-decoration-none go-to">Go to Catalog</a></button>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12 ">
-                        <div class="row d-flex justify-content-between " id='catalog-list'>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Thriller</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Horror</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Detective</a></h4>
-                                    </div>
-                                </div>
+                        <div class="col-sm-12 col-md-6 mt-5">
+                            <div class="img-content ">
+                                <img class="img-fluid" src="images/books.png" alt="books">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12 ">
-                        <div class="row d-flex justify-content-between " id='catalog-list'>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Tragedy</a></h4>
+                    </section>
+                    <!-- Section 2 Catalog-->
+                    <section class="row reveal" >
+                        <div class="col-md 12">
+                            <p class="h2 mt-5  catalog-text">Catalog</p>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row d-flex justify-content-between " id='catalog-list'>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Crime</a></h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Drama</a></h4>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Adventure</a></h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow cursor-pointer py-3">
-                                    <div class="card-body">
-                                        <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Motivational</a></h4>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Fantastic</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Thriller</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Horror</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Detective</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Tragedy</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Drama</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="card shadow cursor-pointer py-3">
+                                        <div class="card-body">
+                                            <h4 class="card-title m-0 text-center h5 font-weight-bold main-card-text"><a href="/catalog">Motivational</a></h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <!-- Section 3 About us -->
-                <section class='row my-5 mt-5 pt-5 about-store-section reveal'>
-                    <div class="col-md-12 mb-4 ">
-                        <div class='about-store-text'>About Store</div>
-                    </div>
-
-                    <div class="col-md-12">
-                        <div class="row justify-content-between">
-
-                            <div class="col-sm-12 col-md-6 col-lg-3 ">
-                                <div class="d-flex align-items-center">
-                                    <div class="as-result-numbers">
-                                        <p>35</p>
-                                    </div>
-                                    <div class="as-result-text">
-                                        <p>Branches the country</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="d-flex align-items-center">
-                                    <div class="as-result-numbers">
-                                        <p>898</p>
-                                    </div>
-                                    <div class="as-result-text">
-                                        <p>Praducts catalog</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="d-flex align-items-center">
-                                    <div class="as-result-numbers">
-                                        <p>8659</p>
-                                    </div>
-                                    <div class="as-result-text">
-                                        <p>Branches the country</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <div class="d-flex align-items-center">
-                                    <div class="as-result-numbers">
-                                        <p>72</p>
-                                    </div>
-                                    <div class="as-result-text">
-                                        <p>Hours delivery to cities</p>
-                                    </div>
-                                </div>
-                            </div>
+                    </section>
+                    <!-- Section 3 About us -->
+                    <section class='row my-5 mt-5 pt-5 about-store-section reveal'>
+                        <div class="col-md-12 mb-4 ">
+                            <div class='about-store-text'>About Store</div>
                         </div>
-                        <!--  Class-row -->
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-12 mb-4 mt-5 ">
-                        <div class='delivery-title'>Delivery</div>
-                    </div>
-                    <div class='col-12 col-sm-12 col-md-12 delivery-text' line-height='24px'>We work without holidays and weekends! Residents of Kiev can receive an order on the day of its registration. Customers from other cities of Ukraine can receive an order within 1-5 days, depending on the location of the settlement
-                        and the selected delivery method. Orders over UAH 1000 are delivered free of charge *. You can see the available methods, exact terms and cost of delivery during checkout in the order basket, after selecting the delivery city.
-                        More details
-                    </div>
-                </section>
-            </div>
-                <!-- Main-container -->
-        </main>
-        
 
+                        <div class="col-md-12">
+                            <div class="row justify-content-between">
+
+                                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                                    <div class="d-flex align-items-center">
+                                        <div class="as-result-numbers">
+                                            <p class="value" akhi="35">0</p>
+                                        </div>
+                                        <div class="as-result-text">
+                                            <p>Branches the country</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="as-result-numbers">
+                                            <p class="value" akhi="898">0</p>
+                                        </div>
+                                        <div class="as-result-text">
+                                            <p>Praducts catalog</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="as-result-numbers">
+                                            <p class="value" akhi="8659">0</p>
+                                        </div>
+                                        <div class="as-result-text">
+                                            <p>Branches the country</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="as-result-numbers">
+                                            <p class="value" akhi="72">0</p>
+                                        </div>
+                                        <div class="as-result-text">
+                                            <p>Hours delivery to cities</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  Class-row -->
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 mb-4 mt-5 ">
+                            <div class='delivery-title'>Delivery</div>
+                        </div>
+                        <div class='col-12 col-sm-12 col-md-12 delivery-text' line-height='24px'>We work without holidays and weekends! Residents of Kiev can receive an order on the day of its registration. Customers from other cities of Ukraine can receive an order within 1-5 days, depending on the location of the settlement
+                            and the selected delivery method. Orders over UAH 1000 are delivered free of charge *. You can see the available methods, exact terms and cost of delivery during checkout in the order basket, after selecting the delivery city.
+                            More details
+                        </div>
+                    </section>
+            </main>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
-
-
+        <script type="module" src="/script/reveal.js"></script>
         <script type="module" src="/script/main.js"></script>
-
     </body>
-
 </html>

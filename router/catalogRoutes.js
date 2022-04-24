@@ -1,20 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
-
 const BooksModel = require('../models/bookModel');
 
+router.get('/type/:id', async (req, res) => {
+  const bookType = req.params.id;
+  let books;
 
+  if (bookType === 'all') {
+    books = BooksModel.find().lean();
+  } else {
+    books = BooksModel.aggregate([{ $match: { bookType } }]);
+  }
+  const book = await books;
+
+  res.render('site/catalog', { book });
+});
 
 router.get('/', (req, res) => {
   BooksModel.find({})
     .lean()
     .then((book) => {
-      CategoryModel.find({}).lean().then(category => {
-        res.render('site/catalog', { book, category });
+      let bookType = book.map((item) => item.bookType);
 
-      })
-
+      let uniqueTypes = [...new Set(bookType)];
+      res.render('site/catalog', { book, uniqueTypes });
     });
 });
 
@@ -24,15 +33,7 @@ router.get('/:id', (req, res) => {
     .lean()
     .then((book) => {
       res.render('site/readmore', { book });
-      console.log(book);
     });
 });
-
-router.get('/:name', (req, res) => {
-  BooksModel.find({bookType: req.params.name}).lean().then(filterBook => {
-    res.render('site/catalog',{filterBook})
-    console.log(filterBook);
-  })
-})
 
 module.exports = router;
