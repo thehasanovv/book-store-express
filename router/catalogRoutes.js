@@ -3,7 +3,6 @@ const router = express.Router();
 const mongoose = require('mongoose');
 
 const BooksModel = require('../models/bookModel');
-const CategoryModel = mongoose.Collection('categories')
 
 
 
