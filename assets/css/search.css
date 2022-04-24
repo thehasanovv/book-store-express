@@ -24,7 +24,7 @@
 .card {
   cursor: pointer;
   padding: 0px;
-  width: 95%;
+  width: 30%;
   margin-bottom: 20px;
 }
 
@@ -57,6 +57,10 @@
   background-color: var(--mainColorOrange);
 }
 
+.read-more-btn:hover {
+  background-color: var(--mainColorHover);
+}
+
 .card:hover .card-body {
   animation: fadeInAnimation ease 0.8s;
   animation-iteration-count: 1;
@@ -76,7 +80,7 @@ input::-webkit-calendar-picker-indicator {
 
 @media screen and (max-width: 992px) {
   .card {
-    width: 95%;
+    width: 43%;
   }
   #books {
     gap: 55px;
@@ -91,7 +95,7 @@ input::-webkit-calendar-picker-indicator {
     gap: 40px;
   }
   .card {
-    width: 95%;
+    width: 43%;
   }
   .card:hover .card-body {
     font-size: 90%;

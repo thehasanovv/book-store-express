@@ -19,31 +19,29 @@
         <div class="col-12 col-sm-12 col-md-4 pl-0">
           <h2 class="h2 font-weight-bolder">Search</h2>
           <form action="/search" method="POST">
-
             <div class="form-row">
-
               <div class="form-group col-md-6">
                 <input type="search" class="form-control mt-4" placeholder="Book name" style="height: 44px"
                   list="title-choices" id="title" name="search" />
               </div>
-
               <div class="form-group col-md-6">
                 <input class="btn mt-4 w-100 text-white" style="background-color: var(--mainColorOrange); height: 44px"
                   id="searchBook" value="SEARCH" type="submit" />
               </div>
           </form>
-
-
-
         </div>
         <!-- If book is not found display alert message -->
         <div class="col-12 col-md-7 p-4">
           <div class="alert alert-danger d-none" id="display-alert" role="alert">
             The book was not found. Please try again
           </div>
-          {{#each books}}
-          <div class="container height-vh mt-5 pt-5 books-container">
-            <div class="row d-flex" id="books">
+        </div>
+      </div>
+    </div>
+
+    <div class="container height-vh mt-5 books-container">
+      <div class="row d-flex" id="books">
+            {{#each books}}
               <div class="card rounded">
                 <img
                   src={{imageUrl}}
@@ -51,29 +49,17 @@
                 <div class="card-body text-center rounded">
                   <p class="card-title">{{bookName}}</p>
                   <p class="card-text">{{authorName}}</p>
-                  <a href="#" class="btn btn-primary read-more-btn"
+                  <a href='/catalog/{{_id}}' class="btn btn-primary read-more-btn"
                     data-name={{bookName}}>Read more</a>
                 </div>
               </div>
-            </div>
-            <!-- Main-container -->
-          </div>
           {{/each}}
-
-        </div>
       </div>
-    </div>
-
-    <div class="container height-vh mt-5 pt-5 books-container">
-      <div class="row d-flex" id="books">
-      </div>
-      <!-- Main-container -->
   </main>
 
 
   <!--READ MORE-->
-
-  <main class="my-5 pt-5 text-main d-none read-more-section">
+  {{!-- <main class="my-5 pt-5 text-main d-none read-more-section">
     <div class="container height-vh mt-5 pt-5">
       <div class="row justify-content-around">
         <div class="col-sm-12 col-md-5">
@@ -93,9 +79,7 @@
         </div>
       </div>
     </div>
-
-    <!-- READ MORE SECTION END -->
-  </main>
+  </main> --}}
 
   <script type="module" src="/script/main.js" defer></script>
 
