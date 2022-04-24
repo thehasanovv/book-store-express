@@ -24,7 +24,7 @@
 .card {
   cursor: pointer;
   padding: 0px;
-  width: 30%;
+  width: 95%;
   margin-bottom: 20px;
 }
 
@@ -76,7 +76,7 @@ input::-webkit-calendar-picker-indicator {
 
 @media screen and (max-width: 992px) {
   .card {
-    width: 45%;
+    width: 95%;
   }
   #books {
     gap: 55px;
@@ -91,7 +91,7 @@ input::-webkit-calendar-picker-indicator {
     gap: 40px;
   }
   .card {
-    width: 45%;
+    width: 95%;
   }
   .card:hover .card-body {
     font-size: 90%;
