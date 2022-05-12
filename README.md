@@ -1,6 +1,6 @@
 # Welcome to Book Store Library App :)
 
-To view a live example, [click here](https://pizza-restaurant-three.vercel.app/)
+<!-- To view a live example, [click here](https://pizza-restaurant-three.vercel.app/) -->
 
 <img src="assets/images/gthome.png">
 
