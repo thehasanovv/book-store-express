@@ -1,4 +1,4 @@
-# Welcome to Book Store Library App :)
+# Welcome to Book Store Library App
 
 <!-- To view a live example, [click here](https://pizza-restaurant-three.vercel.app/) -->
 
